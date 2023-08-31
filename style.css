@@ -68,7 +68,7 @@ footer {
 
 /* Image styling */
 img {
-    width: 820px;
+    max-width: 820px;
     height: 360px;
     display: block;
     margin: 0 auto;
