@@ -94,3 +94,6 @@ img {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+header.scrolled {
+    background-color: #555; /* Change this to the desired background color */
+}
