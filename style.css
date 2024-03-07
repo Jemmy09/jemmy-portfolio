@@ -67,9 +67,30 @@ footer {
 }
 
 /* Image styling */
-img {
-    max-width: 500px;
-    height: 500px;
-    display: block;
-    margin: 0 auto;
-}
+.semi-circle-img {
+    position: relative; /* Allows absolute positioning of child element */
+    overflow: hidden; /* Clip overflowing content */
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+  }
+  
+  .semi-circle-img img {
+    width: 100%; /* Image fills container width */
+    height: 100%; /* Image fills container height */
+    border-radius: 50%; /* Creates a circle from the image */
+    position: absolute; /* Positions image on top of the container */
+    top: 50%; /* Vertically centers the image */
+    left: 50%; /* Horizontally centers the image */
+    transform: translate(-50%, -50%);  /* Corrects image positioning due to absolute positioning */
+  }
+  
+  .semi-circle-img::after {
+    content: ""; /* Creates an empty pseudo-element */
+    position: absolute; /* Positions the element on top of the image */
+    top: 0; /* Positions the element at the top */
+    left: 0; /* Positions the element at the left */
+    width: 100%; /* Fills the container width */
+    height: 100%; /* Fills the container height */
+    background-color: #fff; /* Set your desired background color */
+    border-radius: 50% 50% 0 0; /* Creates a semi-circle at the top */
+  }
