@@ -157,3 +157,19 @@ header.scrolled {
     font-size: 26px;
   }
 }
+
+.btn-project {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-project:hover {
+  background-color: #0b7dda;
+}
