@@ -1,4 +1,4 @@
-/* Full height layout for sticky footer */
+/* Reset & Layout */
 html, body {
   height: 100%;
   margin: 0;
@@ -9,6 +9,7 @@ html, body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 .content-wrapper {
@@ -19,12 +20,21 @@ html, body {
 
 /* Header */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   background-color: #222;
   color: #fff;
   padding: 40px 0;
   text-align: center;
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
+header.scrolled {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Section */
 .profile-container {
   display: flex;
   align-items: center;
@@ -76,7 +86,7 @@ nav a:hover {
   color: #ff9800;
 }
 
-/* Main content */
+/* Main Content */
 main {
   padding: 40px 20px;
   max-width: 1000px;
@@ -93,7 +103,7 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Project box */
+/* Project Box */
 .project {
   background-color: #fff;
   padding: 20px;
@@ -102,7 +112,23 @@ section h2 {
   border-radius: 8px;
 }
 
-/* Contact section */
+.btn-project {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-project:hover {
+  background-color: #0b7dda;
+}
+
+/* Contact Info */
 .contact-info p {
   margin-bottom: 10px;
 }
@@ -126,17 +152,7 @@ footer {
   width: 100%;
 }
 
-/* Header scroll effect */
-header.scrolled {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  transition: background 0.3s ease;
-  background-color: #111;
-}
-
-/* Mobile responsiveness */
+/* Mobile Responsive */
 @media (max-width: 600px) {
   .profile-container {
     flex-direction: column;
@@ -156,20 +172,4 @@ header.scrolled {
   .profile-info h1 {
     font-size: 26px;
   }
-}
-
-.btn-project {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #2196F3;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-}
-
-.btn-project:hover {
-  background-color: #0b7dda;
 }
