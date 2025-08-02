@@ -3,6 +3,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* ✅ Prevent horizontal scroll */
   display: flex;
   flex-direction: column;
   font-family: 'Segoe UI', sans-serif;
@@ -10,12 +11,19 @@ html, body {
   color: #333;
   line-height: 1.6;
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 .content-wrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  overflow-x: hidden; /* ✅ Ensure content doesn’t overflow horizontally */
 }
 
 /* Header */
@@ -25,7 +33,7 @@ header {
   z-index: 10;
   background-color: #222;
   color: #fff;
-  padding: 40px 0;
+  padding: 40px 10px;
   text-align: center;
   transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -34,13 +42,14 @@ header.scrolled {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Profile Section */
+/* Profile */
 .profile-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  text-align: center;
 }
 
 .profile-img {
@@ -69,7 +78,8 @@ nav {
 nav ul {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -90,7 +100,8 @@ nav a:hover {
 main {
   padding: 40px 20px;
   max-width: 1000px;
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
 }
 
 section {
@@ -103,7 +114,7 @@ section h2 {
   margin-bottom: 15px;
 }
 
-/* Project Box */
+/* Project */
 .project {
   background-color: #fff;
   padding: 20px;
@@ -152,24 +163,32 @@ footer {
   width: 100%;
 }
 
-/* Mobile Responsive */
+/* Responsive Design */
 @media (max-width: 600px) {
+  .profile-info h1 {
+    font-size: 24px;
+  }
+
   .profile-container {
     flex-direction: column;
     gap: 15px;
-    text-align: center;
   }
 
   nav ul {
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
 
   main {
-    padding: 20px;
+    padding: 20px 15px;
   }
 
-  .profile-info h1 {
-    font-size: 26px;
+  section h2 {
+    font-size: 22px;
+  }
+
+  .btn-project {
+    width: 100%;
+    text-align: center;
   }
 }
