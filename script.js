@@ -2,14 +2,12 @@
 const body = document.body;
 const darkModeBtn = document.getElementById('dark-mode-toggle');
 
-// Check saved preference
 const isDarkMode = localStorage.getItem('darkMode') === 'true';
 if (isDarkMode) {
   body.classList.add('dark-mode');
   darkModeBtn.textContent = '☀️';
 }
 
-// Dark Mode Toggle
 darkModeBtn.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   const isNowDarkMode = body.classList.contains('dark-mode');
@@ -22,48 +20,55 @@ document.querySelectorAll('nav a').forEach(link => {
   link.addEventListener('click', event => {
     event.preventDefault();
     const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
   });
 });
 
-// Header shadow on scroll
-const header = document.querySelector('header');
-window.addEventListener('scroll', () => {
-  if (window.scrollY > 20) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
-  }
-});
+// EmailJS - Contact Form
+emailjs.init('YOUR_PUBLIC_KEY');
 
-// Contact Form Submission
 const contactForm = document.getElementById('contact-form');
+const submitBtn = document.getElementById('submit-btn');
+const btnText = document.getElementById('btn-text');
+const formStatus = document.getElementById('form-status');
+
 if (contactForm) {
-  contactForm.addEventListener('submit', function(e) {
+  contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const subject = document.getElementById('subject').value;
-    const message = document.getElementById('message').value;
-    
-    // Email validation
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert('Please enter a valid email address');
+    if (!emailRegex.test(document.getElementById('email').value)) {
+      showStatus('Please enter a valid email address.', 'error');
       return;
     }
-    
-    // Create mailto link
-    const mailtoLink = `mailto:jemmyfrancisco30@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
-    
-    // Open default email client
-    window.location.href = mailtoLink;
-    
-    // Clear form
-    contactForm.reset();
-    alert('Thank you for your message! Please send the email that opens.');
+
+    submitBtn.disabled = true;
+    btnText.textContent = 'Sending...';
+
+    const templateParams = {
+      from_name: document.getElementById('name').value,
+      from_email: document.getElementById('email').value,
+      subject: document.getElementById('subject').value,
+      message: document.getElementById('message').value,
+    };
+
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+      .then(() => {
+        showStatus('✅ Message sent successfully! I\'ll get back to you soon.', 'success');
+        contactForm.reset();
+      })
+      .catch(() => {
+        showStatus('❌ Failed to send message. Please try again or email me directly.', 'error');
+      })
+      .finally(() => {
+        submitBtn.disabled = false;
+        btnText.textContent = 'Send Message';
+      });
   });
+}
+
+function showStatus(msg, type) {
+  formStatus.textContent = msg;
+  formStatus.className = 'form-status form-status--' + type;
+  setTimeout(() => { formStatus.className = 'form-status'; formStatus.textContent = ''; }, 6000);
 }
