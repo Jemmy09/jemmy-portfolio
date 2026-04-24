@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jemmy Francisco - Web & Android Developer</title>
+  <title>Jemmy Francisco Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -18,7 +18,12 @@
         <img src="jemmy with bike.jpg" alt="Jemmy Francisco" class="profile-img" />
         <div class="profile-info">
           <h2>Jemmy Francisco</h2>
-          <p>Web Developer & Android Developer</p>
+          <p class="profile-title">Web Developer &amp; Android Developer</p>
+          <p class="profile-location">📍 Philippines</p>
+          <div class="profile-cta">
+            <a href="#projects" class="btn-cta">View Projects</a>
+            <a href="#contact" class="btn-cta btn-cta--outline">Contact Me</a>
+          </div>
         </div>
       </div>
     </header>
@@ -39,7 +44,26 @@
       <!-- About Section -->
       <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>Hello! I'm Jemmy, a passionate web and Android developer based in the Philippines. I love building websites and mobile applications, learning new technologies, and creating user-friendly digital experiences. I'm dedicated to delivering high-quality solutions and continuously improving my skills.</p>
+        <div class="about-container">
+          <div class="about-text">
+            <p>Hello! I'm <strong>Jemmy Francisco</strong>, a passionate Web and Android Developer based in the Philippines. I enjoy building websites and mobile applications, learning new technologies, and crafting user-friendly digital experiences.</p>
+            <p>I'm dedicated to delivering high-quality solutions — from frontend interfaces to backend systems and mobile apps — while continuously improving my skills across both software and hardware.</p>
+          </div>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1</span>
+              <span class="stat-label">OJT Completed</span>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Skills Section -->
@@ -136,125 +160,135 @@
       <!-- Projects Section -->
       <section id="projects" class="fade-in">
         <h2>Projects</h2>
+        <div class="projects-grid">
 
-        <div class="project">
-          <h3>Talaga</h3>
-          <p>
-            A full-stack web application demonstrating modern development practices with responsive design, secure authentication, and scalable cloud infrastructure. Talaga showcases end-to-end development from frontend to database, with professional deployment and domain management.
-          </p>
-          
-          <div class="tech-stack">
-            <h4>Technology Stack</h4>
-            <div class="tech-categories">
-              <div class="tech-category">
-                <h5>Frontend</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">GitHub</span>
-                  <span class="tech-badge">HTML/CSS</span>
-                  <span class="tech-badge">JavaScript</span>
-                </div>
+          <div class="project">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-number">01</span>
+                <span class="project-type">Full-Stack Web App</span>
               </div>
-              
-              <div class="tech-category">
-                <h5>Backend</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">Node.js</span>
-                  <span class="tech-badge">Express.js</span>
-                  <span class="tech-badge">Render</span>
+              <h3>Talaga</h3>
+              <p>A full-stack web application with responsive design, secure authentication, and scalable cloud infrastructure — showcasing end-to-end development from frontend to database with professional deployment and domain management.</p>
+            </div>
+            <div class="tech-stack">
+              <h4>Tech Stack</h4>
+              <div class="tech-categories">
+                <div class="tech-category">
+                  <h5>Frontend</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">HTML/CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">GitHub</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Database</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">PostgreSQL</span>
-                  <span class="tech-badge">Aiven</span>
+                <div class="tech-category">
+                  <h5>Backend</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Node.js</span>
+                    <span class="tech-badge">Express.js</span>
+                    <span class="tech-badge">Render</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Security & Auth</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">Firebase</span>
+                <div class="tech-category">
+                  <h5>Database</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">Aiven</span>
+                  </div>
                 </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Infrastructure & DNS</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">DigitalPlatform Domain</span>
-                  <span class="tech-badge">Cloudflare DNS</span>
+                <div class="tech-category">
+                  <h5>Auth &amp; DNS</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Firebase</span>
+                    <span class="tech-badge">Cloudflare DNS</span>
+                    <span class="tech-badge">Digitalplat Domain</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="project-footer">
+              <a href="https://talaga.qzz.io/" target="_blank" class="btn-project">🔗 Visit Project</a>
+            </div>
           </div>
-          
-          <div class="project-links">
-            <a href="https://talaga.qzz.io/" target="_blank" class="btn-project">Visit Project</a>
-          </div>
-        </div>
 
-        <div class="project">
-          <h3>Cipher System Tool</h3>
-          <p>
-            A web-based cryptography tool supporting multiple classic ciphers: Caesar Cipher, Atbash Cipher, Monoalphabetic Cipher, Polyalphabetic Cipher, Rail Fence Cipher, and Columnar Transposition Cipher. Users can encrypt or decrypt messages interactively with a clean, user-friendly interface.
-          </p>
-          <a href="https://jemmy09.github.io/cipher/" target="_blank" class="btn-project">Visit Project</a>
-        </div>
-
-        <div class="project">
-          <h3>And-Ide (Android IDE)</h3>
-          <p>
-            An integrated development environment for Android devices, designed for aspiring developers. And-Ide provides a comprehensive platform for learning and building applications with support for multiple programming languages and databases, featuring secure authentication and local data persistence.
-          </p>
-          
-          <div class="tech-stack">
-            <h4>Technology Stack</h4>
-            <div class="tech-categories">
-              <div class="tech-category">
-                <h5>Programming Language</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">Java</span>
-                  <span class="tech-badge">Kotlin</span>
-                </div>
+          <div class="project">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-number">02</span>
+                <span class="project-type">Web Tool</span>
               </div>
-              
-              <div class="tech-category">
-                <h5>Development Environment</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">Android Studio</span>
-                  <span class="tech-badge">Android SDK</span>
-                </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Authentication</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">Firebase Auth</span>
-                  <span class="tech-badge">Google OAuth</span>
-                </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Database & Storage</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">SQLite</span>
-                </div>
-              </div>
-              
-              <div class="tech-category">
-                <h5>Supported Languages</h5>
-                <div class="tech-badges">
-                  <span class="tech-badge">PHP</span>
-                  <span class="tech-badge">MySQL/SQL</span>
-                  <span class="tech-badge">CSS</span>
-                  <span class="tech-badge">JavaScript</span>
+              <h3>Cipher System Tool</h3>
+              <p>A web-based cryptography tool supporting multiple classic ciphers — Caesar, Atbash, Monoalphabetic, Polyalphabetic, Rail Fence, and Columnar Transposition. Users can encrypt or decrypt messages interactively with a clean, intuitive interface.</p>
+            </div>
+            <div class="tech-stack">
+              <h4>Tech Stack</h4>
+              <div class="tech-categories">
+                <div class="tech-category">
+                  <h5>Frontend</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">HTML/CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                    <span class="tech-badge">GitHub Pages</span>
+                  </div>
                 </div>
               </div>
             </div>
+            <div class="project-footer">
+              <a href="https://jemmy09.github.io/cipher/" target="_blank" class="btn-project">🔗 Visit Project</a>
+            </div>
           </div>
-          
-          <p class="project-download">📱 Android Application (.apk)</p>
+
+          <div class="project">
+            <div class="project-header">
+              <div class="project-meta">
+                <span class="project-number">03</span>
+                <span class="project-type">Android Application</span>
+              </div>
+              <h3>And-Ide</h3>
+              <p>An integrated development environment for Android devices designed for aspiring developers. Supports multiple programming languages and databases, with secure authentication and local data persistence.</p>
+            </div>
+            <div class="tech-stack">
+              <h4>Tech Stack</h4>
+              <div class="tech-categories">
+                <div class="tech-category">
+                  <h5>Language</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Java</span>
+                    <span class="tech-badge">Kotlin</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h5>Environment</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Android Studio</span>
+                    <span class="tech-badge">Android SDK</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h5>Auth &amp; Storage</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">Firebase Auth</span>
+                    <span class="tech-badge">Google OAuth</span>
+                    <span class="tech-badge">SQLite</span>
+                  </div>
+                </div>
+                <div class="tech-category">
+                  <h5>Supported Languages</h5>
+                  <div class="tech-badges">
+                    <span class="tech-badge">PHP</span>
+                    <span class="tech-badge">MySQL/SQL</span>
+                    <span class="tech-badge">CSS</span>
+                    <span class="tech-badge">JavaScript</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-apk">📱 Android Application (.apk)</span>
+            </div>
+          </div>
+
         </div>
       </section>
 
