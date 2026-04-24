@@ -58,12 +58,10 @@ html, body {
 header {
   background: var(--primary-gradient);
   color: #fff;
-  padding: 30px 20px 40px;
-  text-align: center;
-  transition: var(--transition);
+  padding: 40px 20px 50px;
   box-shadow: var(--shadow);
   position: relative;
-  overflow: hidden;
+  z-index: 1;
 }
 
 .header-top {
@@ -71,7 +69,7 @@ header {
   justify-content: space-between;
   align-items: center;
   max-width: 1000px;
-  margin: 0 auto 28px;
+  margin: 0 auto 32px;
   width: 100%;
 }
 
@@ -80,7 +78,7 @@ header {
   font-weight: 800;
   margin: 0;
   letter-spacing: 3px;
-  opacity: 0.95;
+  color: #fff;
 }
 
 .dark-mode-btn {
@@ -108,7 +106,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 32px;
+  gap: 36px;
   flex-wrap: wrap;
   max-width: 1000px;
   margin: 0 auto;
@@ -116,48 +114,46 @@ header {
 }
 
 .profile-img {
-  width: 140px;
-  height: 140px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   transition: var(--transition);
   flex-shrink: 0;
+  display: block;
 }
 
 .profile-img:hover {
   transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 
 .profile-info {
   text-align: left;
-  color: #fff;
 }
 
 .profile-info h2 {
-  font-size: 34px;
-  margin: 0 0 6px;
+  font-size: 36px;
+  margin: 0 0 8px;
   font-weight: 800;
-  letter-spacing: 0.5px;
   color: #fff;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.5px;
 }
 
 .profile-title {
   font-size: 17px;
-  color: #fff !important;
-  margin: 0 0 4px;
+  color: #fff;
+  margin: 0 0 6px;
   font-weight: 500;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  opacity: 0.92;
 }
 
 .profile-location {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.9) !important;
-  margin: 0 0 18px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  color: #fff;
+  margin: 0 0 20px;
+  opacity: 0.8;
 }
 
 .profile-cta {
@@ -176,6 +172,7 @@ header {
   background: #fff;
   color: #667eea;
   border: 2px solid #fff;
+  display: inline-block;
 }
 
 .btn-cta:hover {
@@ -187,11 +184,11 @@ header {
 .btn-cta--outline {
   background: transparent;
   color: #fff;
-  border: 2px solid rgba(255,255,255,0.7);
+  border: 2px solid rgba(255, 255, 255, 0.7);
 }
 
 .btn-cta--outline:hover {
-  background: rgba(255,255,255,0.15);
+  background: rgba(255, 255, 255, 0.15);
   border-color: #fff;
 }
 
