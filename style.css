@@ -70,25 +70,18 @@ header {
 .header-bg-gif {
   position: absolute;
   inset: 0;
-  z-index: 0;
+  background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJqY3JyODB0d2ZobGw3bng1dHJvZHQ1cGFld3BtODcxNHMzZTlvdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/A5ffIYwJoEpVcMOYiO/giphy.gif') center/cover no-repeat;
+  opacity: 0.3;
+  z-index: 1;
   pointer-events: none;
 }
 
-.header-bg-gif::before {
-  content: '';
+.header-overlay {
   position: absolute;
   inset: 0;
-  background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJqY3JyODB0d2ZobGw3bng1dHJvZHQ1cGFld3BtODcxNHMzZTlvdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/A5ffIYwJoEpVcMOYiO/giphy.gif') center/cover no-repeat;
-  opacity: 0.25;
-  z-index: 1;
-}
-
-.header-bg-gif::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.88) 0%, rgba(118, 75, 162, 0.88) 100%);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
   z-index: 2;
+  pointer-events: none;
 }
 
 .header-top,
