@@ -850,11 +850,6 @@ body.dark-mode footer {
     min-width: 90px;
   }
 
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 25px;
-  }
-
   .skills-container {
     grid-template-columns: 1fr;
   }
