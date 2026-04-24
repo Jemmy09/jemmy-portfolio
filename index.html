@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jemmy Francisco</title>
+  <title>Jemmy Francisco - Web & Android Developer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="content-wrapper">
     <!-- Header Section -->
     <header>
+      <div class="header-top">
+        <h1 class="logo">JF</h1>
+        <button id="dark-mode-toggle" class="dark-mode-btn" title="Toggle dark mode">🌙</button>
+      </div>
       <div class="profile-container">
         <img src="jemmy with bike.jpg" alt="Jemmy Francisco" class="profile-img" />
         <div class="profile-info">
-          <h1>Jemmy Francisco</h1>
-          <p>Web Developer</p>
+          <h2>Jemmy Francisco</h2>
+          <p>Web Developer & Android Developer</p>
         </div>
       </div>
     </header>
@@ -23,6 +27,8 @@
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -31,14 +37,71 @@
     <!-- Main Content -->
     <main>
       <!-- About Section -->
-      <section id="about">
+      <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>Hello! I'm Jemmy, a passionate web developer based in the Philippines. I love building websites and learning new technologies.</p>
+        <p>Hello! I'm Jemmy, a passionate web and Android developer based in the Philippines. I love building websites and mobile applications, learning new technologies, and creating user-friendly digital experiences. I'm dedicated to delivering high-quality solutions and continuously improving my skills.</p>
+      </section>
+
+      <!-- Skills Section -->
+      <section id="skills" class="fade-in">
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="skill-category">
+            <h3>Web Development</h3>
+            <ul class="skill-list">
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>Responsive Design</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Android Development</h3>
+            <ul class="skill-list">
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Mobile UI/UX</li>
+              <li>App Development</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h3>Backend & Database</h3>
+            <ul class="skill-list">
+              <li>PHP</li>
+              <li>MySQL</li>
+              <li>SQL</li>
+              <li>Database Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="fade-in">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <div class="experience-header">
+            <h3>On-the-Job Training (OJT)</h3>
+            <p class="experience-date">2024 - 2025</p>
+          </div>
+          <p class="experience-description">Completed on-the-job training, gaining practical experience in web and mobile development. Worked on real-world projects and improved skills in HTML, CSS, JavaScript, PHP, MySQL, and Android development.</p>
+        </div>
       </section>
 
       <!-- Projects Section -->
-      <section id="projects">
+      <section id="projects" class="fade-in">
         <h2>Projects</h2>
+
+        <div class="project">
+          <h3>Talaga</h3>
+          <p>
+            A web-based project featuring modern design and functionality. Talaga demonstrates full-stack development capabilities with responsive design and user-friendly interface.
+          </p>
+          <div class="project-links">
+            <a href="https://talaga.qzz.io/" target="_blank" class="btn-project">Visit Project</a>
+            <a href="https://github.com/Jemmy09/talaga" target="_blank" class="btn-project btn-secondary">View Code</a>
+          </div>
+        </div>
 
         <div class="project">
           <h3>Cipher System Tool</h3>
@@ -47,14 +110,48 @@
           </p>
           <a href="https://jemmy09.github.io/cipher/" target="_blank" class="btn-project">Visit Project</a>
         </div>
+
+        <div class="project">
+          <h3>And-Ide (Android IDE)</h3>
+          <p>
+            An Android IDE application designed for aspiring developers. Supports PHP, MySQL/SQL, CSS, and JavaScript. This application provides an integrated development environment for learning and building applications on Android devices.
+          </p>
+          <p class="project-download">📱 Android Application (.apk)</p>
+        </div>
       </section>
 
       <!-- Contact Section -->
-      <section id="contact">
+      <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
-        <div class="contact-info">
-          <p>Email: <a href="mailto:Jemmyfrancisco30@gmail.com">Jemmyfrancisco30@gmail.com</a></p>
-          <p>Facebook: <a href="https://www.facebook.com/jemmy.francisco.98" target="_blank">jemmy.francisco.98</a></p>
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p><strong>Email:</strong> <a href="mailto:jemmyfrancisco30@gmail.com">jemmyfrancisco30@gmail.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:09562417189">0956-241-7189</a> / <a href="tel:09203019621">0920-301-9621</a></p>
+            <p><strong>Location:</strong> Philippines</p>
+            <p><strong>Facebook:</strong> <a href="https://www.facebook.com/jemmy.francisco.98" target="_blank">jemmy.francisco.98</a></p>
+          </div>
+
+          <form id="contact-form" class="contact-form">
+            <h3>Send a Message</h3>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
