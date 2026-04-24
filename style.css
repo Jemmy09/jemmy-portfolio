@@ -64,6 +64,21 @@ header {
   box-shadow: var(--shadow);
   position: relative;
   z-index: 1;
+  overflow: hidden;
+}
+
+.header-bg-gif {
+  position: absolute;
+  inset: 0;
+  background: url('https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJqY3JyODB0d2ZobGw3bng1dHJvZHQ1cGFld3BtODcxNHMzZTlvdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/A5ffIYwJoEpVcMOYiO/giphy.gif') center/cover no-repeat;
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.header-top,
+.profile-container {
+  position: relative;
+  z-index: 1;
 }
 
 .header-top {
