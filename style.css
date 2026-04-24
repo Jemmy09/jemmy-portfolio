@@ -156,6 +156,7 @@ header {
 
 .profile-info {
   text-align: left;
+  color: #fff;
 }
 
 .profile-info h2 {
@@ -163,20 +164,23 @@ header {
   margin: 0 0 6px;
   font-weight: 800;
   letter-spacing: 0.5px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 
 .profile-title {
   font-size: 17px;
-  color: rgba(255, 255, 255, 0.9);
+  color: #fff !important;
   margin: 0 0 4px;
   font-weight: 500;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .profile-location {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(255, 255, 255, 0.9) !important;
   margin: 0 0 18px;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
 }
 
 .profile-cta {
